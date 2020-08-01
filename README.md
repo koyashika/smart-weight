@@ -22,3 +22,25 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user|string|null: false, index: true|
+|email|string|null: false, index: true|
+|password|string|null: false
+
+### Association
+- has_many:weights
+
+
+## weightsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user|references|null: false, foreign_key: true|
+|kg|integer|null: false|
+
+### Association
+- belongs_to :user
