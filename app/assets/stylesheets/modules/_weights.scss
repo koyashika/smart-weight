@@ -15,12 +15,24 @@ $font-color: #ffffff;
   width: calc(100% - 250px);
   height: 100vh;
 
-  .title{
-    height: 100px;
+  .Top-items {
     display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    font-size: 25px;
+    justify-content: center; 
+    align-items: center;
+    padding-top: 35px;
+    &__title{
+      font-size: 25px;
+    }
+    &__icon {
+    &__btn-icon {
+      color: $font-color;
+      border-style: none;
+      text-align: right;
+      margin-left: 5px;
+      font-size: 1.5em
+    }
+
+    }
   }
 }
 
@@ -30,4 +42,3 @@ $font-color: #ffffff;
   width: 250px;
   height: 100vh;
 }
-
