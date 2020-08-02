@@ -1,6 +1,5 @@
 class WeightsController < ApplicationController
   def index
-    @data= Weight.all
-    
+    @data = Weight.all
   end
 end

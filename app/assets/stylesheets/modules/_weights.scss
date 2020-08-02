@@ -29,7 +29,7 @@ $font-color: white;
       border-style: none;
       text-align: right;
       margin-left: 5px;
-      font-size: 1.5em
+      font-size: 1.8em
     }
 
     }
@@ -57,6 +57,8 @@ $font-color: white;
         &__number {
           height: 30px;
           width: 80px;
+          border-style: none ;
+          margin: 10px 0 15px;
         }
         &__submit-btn {
           background-color: #660099;
@@ -73,7 +75,7 @@ $font-color: white;
   }
   .Bmi {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
     .Icon {
       &__btn-icon {
         color: $font-color;
