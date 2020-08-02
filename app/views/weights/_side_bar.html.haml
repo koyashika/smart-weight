@@ -1,3 +1,15 @@
 .Side-ber
   .Weight-form
+    .Content
+      今日の体重は
+    %form.Weight
+      .Input-box
+        %input{type: "number", class: "Input-box__number"}
+          kg
+        %input{type: "submit", class: "Input-box__submit-btn",value: "Send"}   
   .Bmi
+    .Icon
+    = link_to "#" do
+      = icon('fas', 'weight', class: "Icon__btn-icon" )
+    .Content
+      BMIを測る    
