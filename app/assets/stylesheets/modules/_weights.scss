@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+$font-color: white;
+
+.Main-graph {
+  color: $font-color;
+  background-color:#99CC00;
+  width: 75%;
+  height: 100vh;
+
+  .Top-items {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 35px;
+    &__title{
+      font-size: 25px;
+    }
+    &__icon {
+    &__btn-icon {
+      color: $font-color;
+      border-style: none;
+      text-align: right;
+      margin-left: 5px;
+      font-size: 1.5em
+    }
+
+    }
+  }
+}
+
+.Side-ber {
+  color: $font-color;
+  background-color:#FFA500;
+  width: 25%;
+  height: 100vh;
+
+  .Weight-form {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    .Content{
+      font-size: 18px;
+    }
+    .Weight {
+      display: block;
+      .Input-box {
+        display: block ;
+        text-align: center;
+        &__number {
+          height: 30px;
+          width: 80px;
+        }
+        &__submit-btn {
+          background-color: #660099;
+          color: $font-color;
+          font-size: 16px;
+          height: 30px;
+          width: 80px;
+          border: none;
+          border-radius: 30px;
+        }
+        
+      } 
+    }
+  }
+  .Bmi {
+    text-align: center;
+    margin-top: 50px;
+    .Icon {
+      &__btn-icon {
+        color: $font-color;
+        border-style: none;
+        font-size: 3em
+      }
+    }
+    .Content {
+      font-size: 16px;
+    }
+  }
+}
