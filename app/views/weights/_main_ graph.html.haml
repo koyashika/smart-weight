@@ -8,4 +8,4 @@
       = icon('fas', 'walking', class: "Top-items__icon__btn-icon" )
 
   .Weight
-  = line_chart @data.group("date(created_at)").sum(:kg), xtitle: "日付", ytitle: "kg"
+  = line_chart @weights.group("date(created_at)").sum(:kg), xtitle: "日付", ytitle: "kg", curve: false, width: "750px", height: "500px", decimal: "0,1"

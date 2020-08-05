@@ -2,12 +2,13 @@
   .Weight-form
     .Content
       今日の体重は
-    %form.Weight
-      .Input-box
-        %input{type: "number", class: "Input-box__number"}
+    .NewWeight
+      = form_with model: @weight, html: {class: "Form"}, local: true do |f|
+        .Input-box
+          = f.number_field :kg, step: "0.1", class: "Input-box__number"
           kg
           %br
-        %input{type: "submit", class: "Input-box__submit-btn",value: "送信"}   
+          = f.submit "送信", class: "Input-box__submit-btn"
   .Bmi
     .Icon
     = link_to "#" do
