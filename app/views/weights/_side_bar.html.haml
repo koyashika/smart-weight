@@ -1,14 +1,17 @@
-.Side-ber
-  .Weight-form
-    .Content
-      今日の体重は
-    .NewWeight
-      = form_with model: @weight, html: {class: "Form"}, local: true do |f|
-        .Input-box
-          = f.number_field :kg, step: "0.1", class: "Input-box__number"
-          kg
-          %br
-          = f.submit "送信", class: "Input-box__submit-btn"
+.SideBer
+  .WeightForm
+    .Today
+      .Content
+        今日の体重は
+      .NewWeight
+        = form_with model: @weight, html: {class: "Form"}, local: true do |f|
+          .InputBox
+            = f.number_field :kg, step: "0.1", class: "InputBox__number"
+            kg
+            %br
+            = f.submit "送信", class: "InputBox__submit-btn"
+    
+    
   .Bmi
     .Icon
     = link_to "#" do

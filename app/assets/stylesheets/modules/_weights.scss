@@ -9,13 +9,13 @@
 
 $font-color: white;
 
-.Main-graph {
+.MainGraph {
   color: $font-color;
   background-color:#99CC00;
   width: 75%;
   height: 100vh;
 
-  .Top-items {
+  .TopItems {
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -36,40 +36,41 @@ $font-color: white;
   }
 }
 
-.Side-ber {
+.SideBer {
   color: $font-color;
   background-color:#FFA500;
   width: 25%;
   height: 100vh;
 
-  .Weight-form {
+  .WeightForm {
     margin-top: 20px;
     display: block;
     text-align: center;
-    .Content{
-      font-size: 18px;
-    }
-    .NewWeight {
-      display: block;
-      .Input-box {
-        display: block ;
-        text-align: center;
-        &__number {
-          height: 30px;
-          width: 80px;
-          border-style: none ;
-          margin: 10px 0 15px;
+    .Today{
+      .Content{
+        font-size: 18px;
+      }
+      .NewWeight {
+        display: block;
+        .InputBox {
+          display: block ;
+          text-align: center;
+          &__number {
+            height: 30px;
+            width: 80px;
+            border-style: none ;
+            margin: 10px 0 15px;
+          }
+          &__submit-btn {
+            background-color: #660099;
+            color: $font-color;
+            font-size: 16px;
+            height: 30px;
+            width: 80px;
+            border: none;
+            border-radius: 30px;
+          }
         }
-        &__submit-btn {
-          background-color: #660099;
-          color: $font-color;
-          font-size: 16px;
-          height: 30px;
-          width: 80px;
-          border: none;
-          border-radius: 30px;
-        }
-        
       } 
     }
   }
