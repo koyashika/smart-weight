@@ -10,11 +10,23 @@
             kg
             %br
             = f.submit "送信", class: "InputBox__submit-btn"
-    
-    
+    .Target
+      .Content
+        目標の体重は
+      .NewWeight
+        %form.form
+          .InputBox
+            %input.InputBox__target-number{type: "number"}
+            kg
+            %br
+            %input.InputBox__target-submit-btn{type: "submit"}
+            
+
   .Bmi
     .Icon
     = link_to "#" do
       = icon('fas', 'weight', class: "Icon__btn-icon" )
     .Content
-      BMIを測る    
+      BMIを測る
+   
+   
