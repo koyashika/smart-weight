@@ -4,12 +4,11 @@ class WeightsController < ApplicationController
   end
 
   def new
-    @weight = weight.new
+    @weight = Weight.new
   end
 
   def create
     @weight = Weight.create(weight_params)
-   
     if @weight.save
       redirect_to weights_path, notice: '体重が送信されました'
     else
@@ -24,5 +23,5 @@ class WeightsController < ApplicationController
   def weight_params
     params.permit(:kg).merge(user_id: current_user.id)
   end
-
 end
+
