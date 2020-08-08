@@ -9,13 +9,13 @@
 
 $font-color: white;
 
-.Main-graph {
+.MainGraph {
   color: $font-color;
   background-color:#99CC00;
   width: 75%;
   height: 100vh;
 
-  .Top-items {
+  .TopItems {
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -29,60 +29,108 @@ $font-color: white;
       border-style: none;
       text-align: right;
       margin-left: 5px;
-      font-size: 1.5em
+      font-size: 1.8em
     }
 
     }
   }
 }
 
-.Side-ber {
+.SideBer {
   color: $font-color;
   background-color:#FFA500;
   width: 25%;
   height: 100vh;
 
-  .Weight-form {
+  .WeightForm {
     margin-top: 20px;
     display: block;
     text-align: center;
-    .Content{
-      font-size: 18px;
+    .Today{
+      .Content{
+        font-size: 18px;
+      }
+      .NewWeight {
+        display: block;
+        .InputBox {
+          display: block ;
+          text-align: center;
+          &__number {
+            height: 30px;
+            width: 80px;
+            border-style: none ;
+            margin: 10px 0 15px;
+          }
+          &__submit-btn {
+            background-color: #660099;
+            color: $font-color;
+            font-size: 16px;
+            height: 30px;
+            width: 80px;
+            border: none;
+            border-radius: 30px;
+          }
+        }
+      } 
     }
-    .Weight {
-      display: block;
-      .Input-box {
-        display: block ;
-        text-align: center;
-        &__number {
-          height: 30px;
-          width: 80px;
+
+    .Target {
+      .Content{
+        font-size: 18px;
+        margin-top: 50px;
+      }
+      .NewWeight {
+        display: block;
+        .InputBox {
+          display: block ;
+          text-align: center;
+          &__target-number {
+            height: 30px;
+            width: 80px;
+            border-style: none ;
+            margin: 10px 0 15px;
+          }
+          &__target-submit-btn {
+            background-color: #660099;
+            color: $font-color;
+            font-size: 16px;
+            height: 30px;
+            width: 80px;
+            border: none;
+            border-radius: 30px;
+          }
         }
-        &__submit-btn {
-          background-color: #660099;
-          color: $font-color;
-          font-size: 16px;
-          height: 30px;
-          width: 80px;
-          border: none;
-          border-radius: 30px;
-        }
-        
       } 
     }
   }
-  .Bmi {
-    text-align: center;
-    margin-top: 50px;
-    .Icon {
-      &__btn-icon {
-        color: $font-color;
-        border-style: none;
-        font-size: 3em
+  .ChangeSevice {
+    .MeasureBmi {
+      text-align: center;
+      margin-top: 70px;
+      .Icon {
+        &__btn-icon {
+          color: $font-color;
+          border-style: none;
+          font-size: 3em
+        }
+      }
+      .Content {
+        font-size: 16px;
       }
     }
-    .Content {
-      font-size: 16px;
+    .EatingRecoad {
+      text-align: center;
+      margin-top: 50px;
+      .Icon {
+        &__btn-icon {
+          color: $font-color;
+          border-style: none;
+          font-size: 3em
+        }
+      }
+      .Content {
+        font-size: 16px;
+      }
     }
   }
 }
