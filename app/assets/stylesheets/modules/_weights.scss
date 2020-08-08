@@ -103,18 +103,34 @@ $font-color: white;
       } 
     }
   }
-  .Bmi {
-    text-align: center;
-    margin-top: 70px;
-    .Icon {
-      &__btn-icon {
-        color: $font-color;
-        border-style: none;
-        font-size: 3em
+  .ChangeSevice {
+    .MeasureBmi {
+      text-align: center;
+      margin-top: 70px;
+      .Icon {
+        &__btn-icon {
+          color: $font-color;
+          border-style: none;
+          font-size: 3em
+        }
+      }
+      .Content {
+        font-size: 16px;
       }
     }
-    .Content {
-      font-size: 16px;
+    .EatingRecoad {
+      text-align: center;
+      margin-top: 50px;
+      .Icon {
+        &__btn-icon {
+          color: $font-color;
+          border-style: none;
+          font-size: 3em
+        }
+      }
+      .Content {
+        font-size: 16px;
+      }
     }
   }
 }
