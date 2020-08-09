@@ -1,3 +1,8 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+
 .SideBer
   .BmiForm
     .Content
@@ -5,13 +10,20 @@
     .InputForm
       %form.form
     .InputBox
-      %input.InputBox__target-number{type: "number",id: "height"}
+      %input.InputBox__height{type: "number",id: "cm"}
       cm
       %br
-      %input.InputBox__target-number{type: "number", id: "weight"}
+      %input.InputBox__weight{type: "number", id: "kg"}
       kg
       %br
-      %input.InputBox__target-submit-btn{type: "submit"}
+      %input.InputBox__target-submit-btn{type: "submit", id: "btn_id"}
+      %br
+      %input.InputBox__bmi{type: "number", id: "bmi"}
+      bmi
+
+
+
+    
       
   .ChangeSevice
     .MeasureBmi
