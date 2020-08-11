@@ -1,5 +1,4 @@
-
-.SideBer
+.SideBar
   .WeightForm
     .Today
       .Content
@@ -13,20 +12,7 @@
            
             %input(onclick="btn(document.getElementById ('un'));" type="submit" value="送信" )/
             
-  .ChangeSevice
-    .MeasureBmi
-      .Icon
-      = link_to bmi_index_path do
-        = icon('fas', 'weight', class: "Icon__btn-icon" )
-      .Content
-        BMIを測る
-    
-    .EatingRecoad
-      .Icon
-        = link_to "#" do
-          = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
-        .Content
-          食事を記録する
+  
 
 :javascript
   var btn = (function (getCookie, setCookie) {
