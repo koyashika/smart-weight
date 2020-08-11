@@ -1,36 +1,12 @@
 
-.SideBer
-  .WeightForm
-    .Today
-      .Content
-        今日の体重は
-      .NewWeight
-        = form_with model: @weight, html: {class: "Form"}, local: true do |f|
-          .InputBox
-            = f.number_field :kg, step: "0.1", class: "InputBox__number"
-            kg
-            %br
-           
-            %input(onclick="btn(document.getElementById ('un'));" type="submit" value="送信" )/
-            
-  .ChangeSevice
-    .MeasureBmi
-      .Icon
-      = link_to bmi_index_path do
-        = icon('fas', 'weight', class: "Icon__btn-icon" )
-      .Content
-        BMIを測る
-    
-    .EatingRecoad
-      .Icon
-        = link_to "#" do
-          = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
-        .Content
-          食事を記録する
-
-:javascript
-  var btn = (function (getCookie, setCookie) {
+var omikuji = (function (getCookie, setCookie) {
   var save = 31;
+  var unList = [
+    { src: '1.png', alt: '大吉' },
+    { src: '2.png', alt: '吉' },
+    { src: '3.png', alt: '凶' },
+    { src: '4.png', alt: '大凶' }
+  ];
 
   return function (node) {
     var d = node.ownerDocument;
@@ -54,7 +30,7 @@
     node.src = unsei.src;
     node.alt = unsei.alt;
   };
-  })(
+})(
   function () {
     return (function (name) {
       var d = this.document;
@@ -63,7 +39,7 @@
       return v ? decodeURIComponent (v[1]) : '';
     }).apply (this, arguments);
   },
-
+  
   function () {
     return (function (name, value, day, path, domain) {
       var d = this.document;
@@ -75,4 +51,3 @@
         (domain ? 'domain=' + encodeURIComponent (domain) + ';': '');
     }).apply (this, arguments);
   });
-          
