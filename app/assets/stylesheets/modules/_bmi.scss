@@ -12,6 +12,32 @@
   background-color:#99CC00;
   width: 75%;
   height: calc(100vh - 100px);
+  span{
+    font-size: 20px;
+  }
+  .IdealWeight {
+    .Health {
+      height: 15vh;
+      width: calc(100vw - 35vw);
+      background-color: darkblue;
+      margin: auto;
+      padding: 10px;
+    }
+  }
+    .Beauty {
+      height: 15vh;
+      width: calc(100vw - 35vw);
+      background-color: darkblue;
+      margin: auto;
+      padding: 10px;
+    }
+    .Model{
+      height: 15vh;
+      width: calc(100vw - 35vw);
+      background-color: darkblue;
+      margin: auto;
+      padding: 10px;
+    }
 }
 .SideBer {
   color: $font-color;
