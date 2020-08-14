@@ -1,30 +1,88 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+
 .SideBer
   .BmiForm
-    .Content
-      BMI測定
-    .InputForm
-      %form.form
-    .InputBox
-      %input.InputBox__target-number{type: "number"}
+    %html
+    %head
+      %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")/
+      %meta(charset="UTF-8")/
+      :css
+        #yase {
+            color: green;
+            font-size: 30px;
+          
+        }
+        #himan {
+            color: green;
+            font-size: 30px;
+           
+        }
+        #hyojyun {
+            color: green;
+            font-size: 30px;
+           
+        }
+      :javascript
+        function calcBMI() {
+            var a = document.getElementById("i0").value;
+            var b = document.getElementById("i1").value;
+            var num1 = parseFloat(b / (a * a) * 10000);
+            var num2 = num1 * 10;
+            var bmi = Math.ceil(num2) / 10;
+
+            if (bmi < 14) {
+                document.getElementById("yase").textContent = "痩せ過ぎて危険！！";
+            } else if (bmi < 17) {
+                document.getElementById("yase").textContent = "モデル体重 痩せ過ぎ。プロでないかぎり真似したらだめ";
+            } else if (bmi < 18.5) {
+                document.getElementById("yase").textContent = "プリンセス体重 モデル、女優等、芸能人並みの体型です";
+            } else if (bmi >= 25) {
+                document.getElementById("himan").textContent = "肥満体重です";
+            } else if (bmi >= 18.6 && bmi < 20.9) {
+                 document.getElementById("himan").textContent = "美容体重 健康も維持しつつスリムな体型です";
+            } else if (bmi >= 20.9 && bmi < 25) {
+                document.getElementById("hyojyun").textContent = "健康体重 健康的で病気になりにくい体型です";
+            }
+
+            document.getElementById("bmi").textContent = bmi;
+        
+            var figure1 = parseFloat(a * a * 22 / 10000);
+            var num3 = figure1 * 10;
+            var health = Math.ceil(num3) /10;
+
+            var figure2 = parseFloat(a * a * 20 / 10000);
+            var num4 = figure2 * 10;
+            var beauty = Math.ceil(num4) /10;
+
+            var figure3 = parseFloat(a * a * 18 / 10000);
+            var num5 = figure3 * 10;
+            var model = Math.ceil(num5) /10;
+
+            document.getElementById("health").textContent = health ;
+            document.getElementById("beauty").textContent = beauty;
+            document.getElementById("model").textContent = model;
+
+            var figure1 = 1;
+              console.log(figure1.toFixed(1));
+        }
+    %body
+      %h2 BMI計算
+      身長
+      %input#i0(value="")/
       cm
-      %br
-      %input.InputBox__target-number{type: "number"}
+      %br/
+      体重
+      %input#i1(value="")/
       kg
-      %br
-      %input.InputBox__target-submit-btn{type: "submit"}
-      
-  .ChangeSevice
-    .MeasureBmi
-      .Icon
-      = link_to bmi_index_path do
-        = icon('fas', 'weight', class: "Icon__btn-icon" )
-      .Content
-        BMIを測る
+      %br/
+      %br/
+      %button(onclick="calcBMI()") check
+      %br/
+
+
     
-    .EatingRecoad
-      .Icon
-        = link_to "#" do
-          = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
-        .Content
-          食事を記録する
+      
           
