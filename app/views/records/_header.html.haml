@@ -1,0 +1,30 @@
+.Header
+  .Item
+    .Title
+      Smart Weight
+    .ChangeSevice
+      .Icon
+        = link_to weights_path do
+          = icon('fas', 'chart-line', class: "Icon__btn-icon" )
+          %br
+          .Icon__content
+            %a 体重を記録
+      .Icon
+        = link_to bmi_index_path do
+          = icon('fas', 'weight', class: "Icon__btn-icon" )
+          %br
+          .Icon__content
+            %a BMIの測定
+      .RecordsIcon
+        = link_to records_path do
+          = icon('fas', 'pen-alt', class: "RecordsIcon__btn-icon" )
+          %br
+          .RecordsIcon__content
+            %a 食事を記録
+      .Icon
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'walking', class: "Icon__btn-icon" )
+          %br
+          .Icon__content
+            %a  アカウント
+      

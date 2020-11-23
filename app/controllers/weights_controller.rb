@@ -12,9 +12,7 @@ class WeightsController < ApplicationController
     if @weight.save
       redirect_to weights_path, notice: '体重が送信されました'
     else
-      @weights = weight.includes(:user)
-      flash.now[:alert] = '体重を入力してください。'
-      render :index
+      redirect_to weights_path, notice: '体重を送信してください'
     end
   end
 

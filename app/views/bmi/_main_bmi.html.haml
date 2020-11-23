@@ -1,20 +1,49 @@
 .MainBmi
-  .Content
-    BMI 計算
-    .ul
-      .li
-      健康体重
+  %br/
+  %br/
+  .Result
+    %span 
+    = current_user.name
+    さんのBMIは
+    %span#bmi
+    %span 
+    %p
+      %span 
+      %span#yase
+        %span#biyou
+          %span#hyojun
+            %span#himan
       %br
-      BMI値：22 健康的で病気になりにくい
-      .li
-      美容体重
-      %br
-      BMI値：20 
-      .li
-      モデル体重 健康も維持しつつスリムな体型
-      %br
-      BMI値：18 モデル、女優等、芸能人並みの細さ
-      .li
-      肥満体重
-      %br
-      BMI値：25以上
+  .Figure
+    %span 
+    = current_user.name
+    さんにのBMIに近い芸能人  
+    %span#figure
+
+  .IdealWeight
+    .Health
+      .Health__content
+        あなたの身長で健康体重(BMI22)は
+      .Health__kg
+      %span#health
+      kg
+      .Health__message
+      健康的で病気になりにくい体型です。
+    %br
+    .Beauty
+      .Beauty__content
+        あなたの身長で美容体重(BMI20)は
+      .Beauty__kg
+      %span#beauty
+      kg
+      .Beauty__message
+      健康も維持しつつスリムな体型です。
+    %br
+    .Model
+      .Model__content
+        あなたの身長でプリンセス体重(BMI18)は
+      .Model__kg
+      %span#model
+      kg
+      .Model__message
+      モデル、女優など芸能人並みの体型です。

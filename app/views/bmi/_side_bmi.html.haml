@@ -1,30 +1,36 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
 .SideBer
   .BmiForm
-    .Content
-      BMI測定
-    .InputForm
-      %form.form
-    .InputBox
-      %input.InputBox__target-number{type: "number"}
-      cm
-      %br
-      %input.InputBox__target-number{type: "number"}
-      kg
-      %br
-      %input.InputBox__target-submit-btn{type: "submit"}
-      
-  .ChangeSevice
-    .MeasureBmi
-      .Icon
-      = link_to bmi_index_path do
-        = icon('fas', 'weight', class: "Icon__btn-icon" )
-      .Content
-        BMIを測る
-    
-    .EatingRecoad
-      .Icon
-        = link_to "#" do
-          = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
-        .Content
-          食事を記録する
-          
+    %html
+    %head
+      %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")/
+      %meta(charset="UTF-8")/
+    %body
+    .BmiForm
+      .FormBox
+        .FormBox__content
+        .FormBox__form
+          身長
+          %input#i0(value="" style= "width:100px;")/
+          cm
+        .FormBox__content
+        .FormBox__form
+          体重
+          %input#i1(value="" style= "width:100px;")/
+          kg
+        .FormBox__gender
+        %label
+        %form#gender
+          %input(name="sex" type="radio" value="man")/
+          男
+          %label
+          %input(name="sex" type="radio" value="woman" checked="checked")/
+          女
+      .Input
+        %button(onclick="calcBMI()" class="Input__btn") 測定
+
+
+  

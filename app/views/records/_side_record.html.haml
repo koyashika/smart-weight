@@ -1,0 +1,13 @@
+.SideRecord
+  .RecordForm
+    = form_with model: @record, html: {class: "Form"}, local: true do |f|
+      .Form__content
+        %h3 
+      = f.text_area :text, id: "textarea", placeholder: "食べたもの", class: "Form__inputText"
+      = f.label :image, class: 'Form__inputImage' do
+        %br
+        .Form__btn
+          = icon('fas', 'camera', class: 'Form__btn__icon')
+          = f.file_field :image, class: 'Form__btn__inputImage'
+          = f.submit "投稿", class: "Form__btn__send"
+    

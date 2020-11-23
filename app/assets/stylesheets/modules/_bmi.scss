@@ -6,45 +6,182 @@
   height: 100vh;
   display: flex;
 }
+.Header {
+  color: $font-color;
+  background-color:#c0c0c0;
+  width: 100%;
+  height: 100px;
 
-.MainBmi { 
-  color: $font-color;
-  background-color:#99CC00;
-  width: 75%;
-  height: 100vh;
-}
-.SideBer {
-  color: $font-color;
-  background-color:#FFA500;
-  width: 25%;
-  height: 100vh;
-  .ChangeSevice {
-    .MeasureBmi {
-      text-align: center;
-      margin-top: 70px;
+  .Item {
+    padding: 17px 25px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    .Title{
+      font-size: 45px;
+      font-family: Tahoma;
+    }
+    .ChangeSevice {
+      display: flex;
+      justify-content: flex-end;
+      .BmiIcon {
+        margin: 0 8px;
+        height: 80px;
+        width: 80px;
+        padding-bottom:1px;
+        text-align: center;
+        &__btn-icon {
+          color: rgba(253, 204, 247, 0.986);
+          border-style: none;
+          font-size: 3.8em;
+        }
+        &__content a{
+          color: rgb(0, 0, 0);
+          font-size: 16px;
+          border-style: none;
+          text-decoration: none;
+         }
+        }
       .Icon {
+        margin: 16px 8px 1px 8px;
+        height: 80px;
+        width: 80px;
+        text-align: center;
         &__btn-icon {
           color: $font-color;
           border-style: none;
-          font-size: 3em
+          font-size: 2.5em;
         }
-      }
-      .Content {
-        font-size: 16px;
+        &__content a{
+          color: $font-color;
+          font-size: 14px;
+          border-style: none;
+          text-decoration: none;
+          }
       }
     }
-    .EatingRecoad {
+  }
+}
+
+.BmiContainer {
+  background-image : url("images/bmi.jpg");
+  background-size:cover;
+  display: flex;
+
+  .MainBmi { 
+    color: $font-color;
+    width: 75%;
+    height: calc(100vh - 100px);
+    .Result, .Figure {
+      font-size: 22px;
+      margin: 0 0 15px 15px;
+    }
+    #yase {
+      color:  rgb(0, 255, 255)	;
+      font-size: 30px;
+    }
+    #biyou {
+      color: rgb(240, 179, 240);
+      font-size: 30px;
+    }
+    #hyojun {
+      color:rgb(116, 231, 116);
+      font-size: 30px;
+  }
+    #himan {
+      color:rgb(253, 144, 101);
+      font-size: 30px;
+    }
+    #bmi {
+      font-size: 30px;
+    }
+
+ 
+    #yase, #himan, #hyojun {
+      font-size: 28px;
+      margin-left: 20px;
+    }
+    .IdealWeight {
+      margin-top: 20px;
       text-align: center;
-      margin-top: 50px;
-      .Icon {
-        &__btn-icon {
-          color: $font-color;
-          border-style: none;
-          font-size: 3em
+      
+      .Health {
+        height: 15vh;
+        width: calc(100vw - 50vw);
+        background-color: rgba(116, 231, 116, 0.4);
+        margin: auto;
+        padding: 20px;
+        &__content {
+          font-size: 18px;
+        }
+        #health {
+          font-size: 23px;
         }
       }
-      .Content {
-        font-size: 16px;
+      .Beauty {
+        height: 15vh;
+        width: calc(100vw - 50vw);
+        background-color: rgba(240, 179, 240, 0.4);
+        margin: auto;
+        padding: 10px;
+        padding: 20px;
+        &__content {
+          font-size: 18px;
+        }
+        #beauty {
+          font-size: 23px;
+        }
+      }
+      .Model{
+        height: 15vh;
+        width: calc(100vw - 50vw);
+        background-color: rgba(0, 255, 255, 0.4);
+        margin: auto;
+        padding: 20px;
+        &__content {
+          font-size: 18px;
+        }
+        #model {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  .SideBer {
+    color: $font-color;
+    width: 25%;
+    height: calc(100vh - 100px);
+    .BmiForm {
+      margin-top: 40px;
+      text-align: center;
+      .FormBox {
+        &__content{
+          font-size: 20px;
+        }
+        &__form {
+         font-size: 20px;
+         padding-top: 20px;
+        }
+        &__gender {       
+          margin: 16px;
+          font-size: 25px;
+        }
+      }
+      .Input {
+        &__btn {
+          margin: 16px;
+          display: inline-block;
+          padding: 0.5em 1.3em;
+          text-decoration: none;
+          color: #67c5ff;
+          border: solid 2px #67c5ff;
+          border-radius: 3px;
+          transition: .4s;
+        }
+
+        &__btn:hover {
+          background: #67c5ff;
+          color: white;
+        }
       }
     }
   }

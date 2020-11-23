@@ -1,4 +1,4 @@
-.SideBer
+.SideBar
   .WeightForm
     .Today
       .Content
@@ -9,30 +9,6 @@
             = f.number_field :kg, step: "0.1", class: "InputBox__number"
             kg
             %br
-            = f.submit "送信", class: "InputBox__submit-btn"
-    .Target
-      .Content
-        目標の体重は
-      .NewWeight
-        %form.form
-          .InputBox
-            %input.InputBox__target-number{type: "number"}
-            kg
-            %br
-            %input.InputBox__target-submit-btn{type: "submit"}
-            
-  .ChangeSevice
-    .MeasureBmi
-      .Icon
-      = link_to bmi_index_path do
-        = icon('fas', 'weight', class: "Icon__btn-icon" )
-      .Content
-        BMIを測る
-    
-    .EatingRecoad
-      .Icon
-        = link_to "#" do
-          = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
-        .Content
-          食事を記録する
-          
+            %input(type="submit" value="送信" class="InputBox__btn")
+  
+

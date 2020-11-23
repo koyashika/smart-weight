@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+}
+.Header {
+  color: $font-color;
+  background-color:#c0c0c0;
+  width: 100%;
+  height: 100px;
+
+  .Item {
+    padding: 17px 25px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    .Title{
+      font-size: 45px;
+      font-family: Tahoma;
+    }
+    .ChangeSevice {
+      display: flex;
+      justify-content: flex-end;
+      .RecordsIcon {
+        margin: 0 8px;
+        height: 80px;
+        width: 80px;
+        padding-bottom:1px;
+        text-align: center;
+        &__btn-icon {
+          color: rgb(255, 236, 152);
+          border-style: none;
+          font-size: 3.8em;
+        }
+        &__content a{
+          color: rgb(0,0,0);
+          font-size: 16px;
+          border-style: none;
+          text-decoration: none;
+         }
+      }
+      .Icon {
+        margin: 16px 8px 1px 8px;
+        height: 80px;
+        width: 80px;
+        text-align: center;
+        &__btn-icon {
+          color: $font-color;
+          border-style: none;
+          font-size: 2.5em;
+        }
+        &__content a{
+          color: $font-color;
+          font-size: 14px;
+          border-style: none;
+          text-decoration: none;
+          }
+      }
+    }
+  }
+}
+.RecordContainer{
+  background-image : url("images/record.jpg");
+  background-size:cover;
+  display: flex;
+  .MainRecord, .UserRecord { 
+    color: $font-color;
+    width: 75%;
+    height: calc(100vh - 100px);
+    overflow: scroll;
+    .RecordBox, .UserRecordBox {
+      position:relative;
+      padding: 15px 18px;
+      margin: 2.5em auto;
+      width: 70%;
+      color: #555555; /* 文字色 */
+      background-color: rgb(246, 244, 212);
+      //background-color: #e0ebaf; /*BOX背景色*/ 
+      box-shadow: 0 2px 5px #999;
+      .Title{        
+      }
+      .Info {
+        &__userName{
+          font-size: 20px;
+          position: absolute;
+          top: -15px;
+          left: 30px;
+          padding: 8px 40px;
+          color: #555555; /*タイトル色*/
+          font-weight: bold;
+          background-color: rgba(255,255,255,.4);
+          border-left: 2px dotted rgba(0,0,0,.1);
+          border-right: 2px dotted rgba(0,0,0,.1);
+          box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+          transform: rotate(-5deg);
+        }
+        &userName__icon {
+          font-size: 20px; 
+        }
+        &__date {
+          font-size: 15px;
+          text-align: right;
+        }
+      }
+      &__text {
+        text-align: center;
+        font-size: 22px;
+        white-space: pre;
+        padding-bottom: 5px;
+      }
+      &__image {
+        text-align: center;
+      }
+      .More {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 8px;
+        .Fix {
+          &__icon {
+            color:rgb(241, 145, 175);
+            text-decoration: none;
+            font-size: 25px;
+            padding-right: 10px;
+          }
+        }
+
+        .Action {
+          &__icon {
+            color:rgb(241, 145, 175);
+            text-decoration: none;
+            font-size: 25px;
+            padding-right: 10px;
+          }
+        }
+          .Favorite {
+            &__like{
+              width: 25px;
+              height: 30px;
+              font-size: 25px;
+              color:rgb(241, 145, 175); 
+              }
+            &__not-like {
+              width: 25px;
+              height: 30px;
+              font-size: 25px;
+              color:rgb(55, 92, 212);
+            }
+          }
+          
+        
+     }
+  }
+}
+
+  .SideRecord {
+    color: $font-color;
+    width: 25%;
+    height: calc(100vh - 100px);
+    .RecordForm {
+      text-align: center;
+      margin-top: 25px;
+      .Form{
+        &__content {
+        font-size: 23px;
+        }
+        &__inputText {
+          width: 280px;
+          height: 180px;
+          padding: 8px;
+          line-height: 20px;
+        }
+        &__btn {
+          display: flex;
+          justify-content: flex-end;
+          &__icon {
+            color: rgb(169, 176, 195) ;
+            font-size: 35px;
+            margin: 3px 20px 0 0;
+          }
+          &__icon:hover {
+            color: rgb(64, 72, 92) ;
+            font-size: 35px;
+            margin: 3px 20px 0 0;
+          }
+          &__inputImage {
+            display: none;
+          }
+          &__send {
+            margin: 3px 38px 0 0;
+            display: inline-block;
+            padding: 0.5em 1.3em;
+            text-decoration: none;
+            color: #67c5ff;
+            border: solid 2px #67c5ff;
+            border-radius: 3px;
+            transition: .4s;
+          }
+          &__send:hover {
+            background: #67c5ff;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,135 +2,167 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  height: 100vh;
-  display: flex;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+.Wrapper {
+}
 $font-color: white;
 
-.MainGraph {
+.Header {
   color: $font-color;
-  background-color:#99CC00;
-  width: 75%;
-  height: 100vh;
+  background-color:#c0c0c0;
+  width: 100%;
+  height: 100px;
 
-  .TopItems {
+  .Item {
+    padding: 17px 25px 0px 20px;
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin-top: 35px;
-    &__title{
-      font-size: 25px;
+    justify-content: space-between;
+    .Title{
+      font-size: 45px;
+      font-family: Tahoma;
     }
-    &__icon {
-      &__btn-icon {
-        color: $font-color;
-        border-style: none;
-        text-align: right;
-        margin-left: 5px;
-        font-size: 1.8em
-    }
-
+    .ChangeSevice {
+      display: flex;
+      justify-content: flex-end;
+      .WeightIcon {
+        margin: 0 8px;
+        height: 80px;
+        width: 80px;
+        padding-bottom:1px;
+        text-align: center;
+        &__btn-icon {
+          color:#c5dcfd;
+          border-style: none;
+          font-size: 3.8em;
+        }
+        &__content a{
+          color: rgb(0, 0, 0);
+          font-size: 16px;
+          border-style: none;
+          text-decoration: none;
+         }
+        }
+      .Icon {
+        margin: 16px 8px 1px 8px;
+        height: 80px;
+        width: 80px;
+        text-align: center;
+        &__btn-icon {
+          color: $font-color;
+          border-style: none;
+          font-size: 2.5em;
+          transition: .4s;
+        }
+        &__content a{
+          color: $font-color;
+          font-size: 14px;
+          border-style: none;
+          text-decoration: none;
+          }
+      }
     }
   }
 }
 
-.SideBer {
-  color: $font-color;
-  background-color:#FFA500;
-  width: 25%;
-  height: 100vh;
-
-  .WeightForm {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    .Today{
-      .Content{
-        font-size: 18px;
+.WeightContainer {
+  display: flex;
+  background-image : url("images/weight3.jpg");
+  background-size:cover;
+  .MainGraph {
+    color: $font-color;
+    
+    width: 75%;
+    height: calc(100% - 100px);
+    .TopItems {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      margin: 15px 0 10px 0;
+      &__title{
+        position: relative;
+        padding: 0.4em 1em;
+        background: #9fc6fb;
+        font-size: 23px;
       }
-      .NewWeight {
-        display: block;
-        .InputBox {
-          display: block ;
-          text-align: center;
-          &__number {
-            height: 30px;
-            width: 80px;
-            border-style: none ;
-            margin: 10px 0 15px;
-          }
-          &__submit-btn {
-            background-color: #660099;
-            color: $font-color;
-            font-size: 16px;
-            height: 30px;
-            width: 80px;
-            border: none;
-            border-radius: 30px;
-          }
-        }
-      } 
-    }
-
-    .Target {
-      .Content{
-        font-size: 18px;
-        margin-top: 50px;
+      &__title:after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 30px;
+        border: 13px solid transparent;
+        border-top: 13px solid #9fc6fb;
+        width: 0;
+        height: 0;
       }
-      .NewWeight {
-        display: block;
-        .InputBox {
-          display: block ;
-          text-align: center;
-          &__target-number {
-            height: 30px;
-            width: 80px;
-            border-style: none ;
-            margin: 10px 0 15px;
-          }
-          &__target-submit-btn {
-            background-color: #660099;
-            color: $font-color;
-            font-size: 16px;
-            height: 30px;
-            width: 80px;
-            border: none;
-            border-radius: 30px;
-          }
-        }
-      } 
+      
     }
   }
-  .ChangeSevice {
-    .MeasureBmi {
+
+  .SideBar {
+    color: $font-color;
+    
+    width: 25%;
+    height: calc(100vh - 100px);
+
+    .WeightForm {
+      margin-top: 20px;
+      display: block;
       text-align: center;
-      margin-top: 70px;
-      .Icon {
-        &__btn-icon {
-          color: $font-color;
-          border-style: none;
-          font-size: 3em
+      .Today{
+        padding-top: 35px;
+        .Content{
+          font-size: 25px;
         }
-      }
-      .Content {
-        font-size: 16px;
+        .NewWeight {
+          display: block;
+          .InputBox {
+            display: block ;
+            text-align: center;
+            &__number {
+              height: 30px;
+              width: 80px;
+              border-style: none ;
+              margin: 10px 0 15px;
+            }
+            &__btn{
+              display: inline-block;
+              padding: 0.3em 1em;
+              text-decoration: none;
+              color: #67c5ff;
+              border: solid 2px #67c5ff;
+              border-radius: 3px;
+              transition: .4s;
+            }
+
+            &__btn:hover {
+              background: #67c5ff;
+              color: white;
+            }
+            
+          }
+        } 
       }
     }
-    .EatingRecoad {
-      text-align: center;
-      margin-top: 50px;
-      .Icon {
-        &__btn-icon {
-          color: $font-color;
-          border-style: none;
-          font-size: 3em
-        }
-      }
-      .Content {
-        font-size: 16px;
-      }
-    }
+    
   }
 }
