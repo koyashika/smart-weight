@@ -1,0 +1,14 @@
+.UserRecordBox
+  .Info
+    .Info__userName
+      = icon("fas","user", class: 'Info__userName__icon')
+    = user_record.user.name
+    .Info__date
+      = user_record.created_at.strftime("%Y/%m/%d %H:%M")
+  
+  - if user_record.text.present?
+    %p.RecordBox__text
+      = user_record.text
+  - if user_record.image.present?
+    %p.RecordBox__image
+      = image_tag user_record.image.url

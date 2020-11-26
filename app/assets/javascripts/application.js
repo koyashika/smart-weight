@@ -4,6 +4,6 @@
 //= require_tree .
 //= require chartkick
 //= require Chart.bundle
+//= require jquery
 
-	
-console.log("JavaScriptは正常に読み込まれています");
+

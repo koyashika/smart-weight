@@ -1,0 +1,8 @@
+- if record.liked_by?(current_user)
+  = link_to(record_add_path(record), method: :delete, remote: true, id: :"like-btn-#{record.id}") do
+    = icon("far","thumbs-up", class: 'Favorite__like')
+- else
+  = link_to(record_add_path(record), method: :post, remote: true, id: :"like-btn-#{record.id}") do
+    = icon("fas","smile", class: 'Favorite__not-like')
+
+  

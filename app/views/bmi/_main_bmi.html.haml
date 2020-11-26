@@ -2,19 +2,28 @@
   %br/
   %br/
   .Result
-  %span あなたのBMIは
-  %span#bmi
-  %span 
-  %p
     %span 
-    %span#yase
-      %span#himan
-        %span#hyojyun
-        %br
+    = current_user.name
+    さんのBMIは
+    %span#bmi
+    %span 
+    %p
+      %span 
+      %span#yase
+        %span#biyou
+          %span#hyojun
+            %span#himan
+      %br
+  .Figure
+    %span 
+    = current_user.name
+    さんにのBMIに近い芸能人  
+    %span#figure
+
   .IdealWeight
     .Health
       .Health__content
-      %span あなたの身長で健康体重(BMI22)は
+        あなたの身長で健康体重(BMI22)は
       .Health__kg
       %span#health
       kg
@@ -23,7 +32,8 @@
     %br
     .Beauty
       .Beauty__content
-      %span あなたの身長で美容体重(BMI20)は
+        あなたの身長で美容体重(BMI20)は
+
       .Beauty__kg
       %span#beauty
       kg
@@ -32,7 +42,7 @@
     %br
     .Model
       .Model__content
-      %span あなたの身長でプリンセス体重(BMI18)は
+        あなたの身長でプリンセス体重(BMI18)は
       .Model__kg
       %span#model
       kg
