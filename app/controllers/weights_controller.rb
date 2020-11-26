@@ -11,10 +11,9 @@ class WeightsController < ApplicationController
     @weight = Weight.create(weight_params)
     if @weight.save
       redirect_to weights_path, notice: '体重が送信されました'
-    #else
-      #@weights = weight.includes(:user)
-      #flash.now[:alert] = '体重を入力してください。'
-      #render :index
+    else
+      redirect_to weights_path, notice: '体重を送信してください'
+
     end
   end
 

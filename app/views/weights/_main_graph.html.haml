@@ -2,7 +2,10 @@
   .TopItems
     .TopItems__title
       = current_user.name
-      の体重グラフ
-    
+      さんの体重グラフ
   .Weight
-    = line_chart @weights.group("date(created_at)").sum(:kg), xtitle: "日付", ytitle: "kg", curve: false, width: "750px", height: "80vh", decimal: "0,1"
+    = line_chart @weights.group("date(created_at)").sum(:kg), xtitle: "日付", ytitle: "kg", curve: false, width: "70vw", height: "80vh", precision: 4, min: 40
+ 
+ 
+  
+

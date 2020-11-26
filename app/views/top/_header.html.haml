@@ -3,19 +3,18 @@
     .Title
       Smart Weight
     .ChangeSevice
-      .WeightIcon
+      .Icon
         = link_to weights_path do
-          = icon('fas', 'chart-line', class: "WeightIcon__btn-icon" )
+          = icon('fas', 'chart-line', class: "Icon__btn-icon" )
           %br
-          .WeightIcon__content
+          .Icon__content
             %a 体重を記録
       .Icon
-        .Conteiner
-          = link_to bmi_index_path do
-            = icon('fas', 'weight', class: "Icon__btn-icon" )
-            %br
-            .Icon__content
-              %a BMIの測定
+        = link_to bmi_index_path do
+          = icon('fas', 'weight', class: "Icon__btn-icon" )
+          %br
+          .Icon__content
+            %a BMIの測定
       .Icon
         = link_to records_path do
           = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
@@ -28,3 +27,4 @@
           %br
           .Icon__content
             %a  アカウント
+      
