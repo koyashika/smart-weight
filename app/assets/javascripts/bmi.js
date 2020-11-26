@@ -146,5 +146,3 @@
   var figure1 = 1;
     console.log(figure1.toFixed(1));
 }
-
-

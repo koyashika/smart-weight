@@ -13,6 +13,7 @@ class WeightsController < ApplicationController
       redirect_to weights_path, notice: '体重が送信されました'
     else
       redirect_to weights_path, notice: '体重を送信してください'
+
     end
   end
 
