@@ -8,19 +8,19 @@
           = icon('fas', 'chart-line', class: "Icon__btn-icon" )
           %br
           .Icon__content
-            %a 体重を記録
+            %a graph
       .BmiIcon
         = link_to bmi_index_path do
           = icon('fas', 'weight', class: "BmiIcon__btn-icon" )
           %br
           .BmiIcon__content
-            %a BMIの測定
+            %a BMI
       .Icon
         = link_to records_path do
           = icon('fas', 'pen-alt', class: "Icon__btn-icon" )
           %br
           .Icon__content
-            %a 食事を記録
+            %a record
       .Icon
         = link_to edit_user_path(current_user) do
           = icon('fas', 'walking', class: "Icon__btn-icon" )

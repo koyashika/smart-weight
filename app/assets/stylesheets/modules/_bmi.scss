@@ -30,12 +30,12 @@
         padding-bottom:1px;
         text-align: center;
         &__btn-icon {
-          color: rgba(253, 204, 247, 0.986);
+          color: white;
           border-style: none;
           font-size: 3.8em;
         }
         &__content a{
-          color: rgb(0, 0, 0);
+          color: white;
           font-size: 16px;
           border-style: none;
           text-decoration: none;
@@ -189,7 +189,6 @@
 
 .MainBmi { 
   color: $font-color;
-  background-color:#99CC00;
   width: 75%;
   height: calc(100vh - 100px);
   span{
@@ -221,7 +220,6 @@
 }
 .SideBer {
   color: $font-color;
-  background-color:#FFA500;
   width: 25%;
   height: calc(100vh - 100px);
   
