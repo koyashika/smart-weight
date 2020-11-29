@@ -1,46 +1,71 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Smart Waight
+体重管理を行うダイエットアプリです。
+体重や食事の記録、BMIの計算ができます。
 
-Things you may want to cover:
+## 機能一覧
+1. ユーザー登録（名前・メールアドレス）、ログイン機能
+2. 体重記録  
+　日々の体重をグラフにして表示します。
+3. BMI計算  
+　身長・体重・性別を入力すると、BMIが表示され、BMIの近い芸能人が表示されます。  
+　また、その身長に合った標準体重、美容体重、プリンセス体重を計算します。
+4. 食事記録  
+　文字または写真で、食べた物を記録します。
+ 
+## 本番環境
 
-* Ruby version
+## 制作背景  
+  コロナ禍において、「コロナ太り」という言葉や芸能人の大幅なダイエットなどが話題となり、  
+  体重を気にする人が増えた。  
+  そんな人たちが楽しんでダイエットできるアプリを作成した。
 
-* System dependencies
+## デモ
 
-* Configuration
+![デモ](https://image-url.gif)
 
-* Database creation
 
-* Database initialization
+## 開発環境
+* ruby '2.6.5'
 
-* How to run the test suite
+## 課題・追加実装
+- 体重グラフ　　
+  - 1日に何度も入力すると和が返ってしまうので、入力を1日1回に制限する必要がある。
+  - 体重がユーザーごとに管理できていない。
+- 食事記録
+  - コメント機能、いいね機能、ユーザーごとに投稿を表示させる機能を追加する。
 
-* Services (job queues, cache servers, search engines, etc.)
+## DB設計
 
-* Deployment instructions
+### usersテーブル
 
-* ...
+|Column  |Type  |Options                 |
+|--------|------|------------------------|
+|user    |string|null: false, index: true|
+|email   |string|null: false, index: true|
+|password|string|null: false             |
 
-## usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user|string|null: false, index: true|
-|email|string|null: false, index: true|
-|password|string|null: false
-
-### Association
+#### Association
 - has_many:weights
+- has_many:records
 
+### weightsテーブル
 
-## weightsテーブル
+|Column|Type      |Options                       |
+|------|----------|------------------------------|
+|user  |references|null: false, foreign_key: true|
+|kg    |integer   |null: false                   |
 
-|Column|Type|Options|
-|------|----|-------|
-|user|references|null: false, foreign_key: true|
-|kg|integer|null: false|
+#### Association
+- belongs_to :user
 
-### Association
+### recordsテーブル
+
+|Column|Type      |Options                       |
+|------|----------|------------------------------|
+|user  |references|null: false, foreign_key: true|
+|text  |string    |null: false                   |
+|image |text      |null: false                   |
+
+#### Association
 - belongs_to :user
