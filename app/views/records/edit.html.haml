@@ -1,17 +1,16 @@
 .Wrapper
-  = render "weights/header"
-.Container
+  = render "header"
+.RecordContainer
   = render "records"
   .EditRecord
     .RecordForm
-      編集する
       = form_with model: @record, html: {class: "Form"}, local: true do |f|
-        = f.text_area :text, placeholder: "text", rows: "5"
+        .Form__content
+          %h3 
+        = f.text_area :text, class: "Form__inputText"
         = f.label :image, class: 'Form__inputImage' do
-          = icon('far', 'image', class: 'Form__icon')
-          = f.file_field :image, class: 'Form__inputImage__file'
-        %br
-        = f.submit "SEND"
-    
-    
-      
+          %br
+          .Form__btn
+            = icon('fas', 'camera', class: 'Form__btn__icon')
+            = f.file_field :image, class: 'Form__btn__inputImage'
+            = f.submit "編集", class: "Form__btn__send"

@@ -1,9 +1,8 @@
 .RecordBox
   .Info
-    .Info__userName
-      =link_to records_path(main_record.user.id) do
-        -#= icon("fas","user", class: 'Info__userName__icon')
-      = main_record.user.name
+    = link_to record_path(main_record.user.id) do
+      .Info__userName
+        = main_record.user.name
     .Info__date
       = main_record.created_at.strftime("%Y/%m/%d %H:%M")
   
@@ -20,8 +19,8 @@
           = icon("far","trash-alt", class: 'Fix__icon')
         = link_to edit_record_path(main_record.id), method: :get do
           = icon("far","edit", class: 'Fix__icon')
-    .Action
-      = icon("far","comment", class: 'Action__icon')
-    .Favorite
-      %div(id="main-btn-#{main_record.id}")
-      = render "likes/like", record: main_record
+    -# .Action
+    -#   = icon("far","comment", class: 'Action__icon')
+    -# .Favorite
+    -#   %div(id="main-btn-#{main_record.id}")
+    -#   = render "likes/like", record: main_record

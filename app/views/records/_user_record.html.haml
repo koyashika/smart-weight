@@ -1,8 +1,5 @@
 .UserRecordBox
   .Info
-    .Info__userName
-      = icon("fas","user", class: 'Info__userName__icon')
-    = user_record.user.name
     .Info__date
       = user_record.created_at.strftime("%Y/%m/%d %H:%M")
   
@@ -12,3 +9,10 @@
   - if user_record.image.present?
     %p.RecordBox__image
       = image_tag user_record.image.url
+  .More
+    .Fix
+      - if user_signed_in? && current_user.id == user_record.user_id
+        = link_to record_path(user_record.id), method: :delete do
+          = icon("far","trash-alt", class: 'Fix__icon')
+        = link_to edit_record_path(user_record.id), method: :get do
+          = icon("far","edit", class: 'Fix__icon')

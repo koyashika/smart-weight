@@ -11,14 +11,15 @@ class RecordsController < ApplicationController
     user = User.find(params[:id])
     @name = user.name
     @records = user.records
+    @records = Record.includes(:user).order("created_at DESC")
   end
 
   def create
     @record = Record.new(record_params)
     if @record.save
-      redirect_to records_path, notice: 'textが送信されました'
+      redirect_to records_path, notice: 'テキストが送信されました'
     else
-      flash.now[:alert] = 'textを入力してください。'
+      flash.now[:alert] = 'テキストを入力してください。'
       render :index
     end
   end
